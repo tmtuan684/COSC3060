@@ -22,6 +22,6 @@ rl.setPrompt(`What is your age? `);
 rl.prompt();
 // Event and callback function to handle user input
 rl.on('line', (age) => { // 'line' event is emitted when the user inputs a line and presses Enter 
-    console.log(`Age received by the user: ${age}`);
+    console.log(`You are : ${age} years old.`);
     rl.close();
 })

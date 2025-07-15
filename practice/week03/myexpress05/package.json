@@ -1,0 +1,16 @@
+{
+  "name": "myexpress05",
+  "version": "1.0.0",
+  "description": "Express server with ejs engine and control statement",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js; nodemon index.js"
+  },
+  "author": "Tuan Tran",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "eps": "^0.1.0",
+    "express": "^5.1.0"
+  }
+}

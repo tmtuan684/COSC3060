@@ -1,0 +1,1 @@
+I make this mini text file to practice using fs package to test readfile function.
