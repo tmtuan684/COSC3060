@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercises for Bootstrap grid layout</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <style>
+            footer {
+                position: fixed;
+                bottom: 20px;
+            }
+            .col, .row {
+                border: 1px 
+            }
+        </style>
+    </head>
+    <body>
+        <header class="container-fluid bg-primary p-3">
+            <h1 class="text-light text-center fs-3">Bootstrap grid layout exercises</h1>
+        </header>
+        <!-- expected layout-->
+        <main class="container p-3">
+            <h2 class="fs-4">Exercise: Random numbers of rows and columns layout</h2>
+            
+            <div class="alert alert-info">
+                <span>Using Bootstrap classes, design a layout similar to the the target layout below.</span> 
+                <button id="btn-new-layout" class="btn btn-primary">Generate a layout</button>
+            </div>
+            <h3 class="text-center badge text-bg-primary">Target layout</h3>
+            <section id="expected-layout" class="container"></section>
+            
+            <!-- Your design layout--> 
+            <h3 class="text-center badge text-bg-primary">Current layout</h3>
+            <section id="design-layout" class="container"></section>
+
+            <!-- Your code -->
+            <div class="container form-floating mt-5 ">
+                <textarea class="form-control" placeholder="Write your HTML Code with Bootstrap attributes" id="design-canvas" style="height: 100px; padding: 10px 20px"></textarea>
+                <button id="btn-apply-design" class="btn btn-info mt-2">Apply design</button>
+            </div>
+        </main> 
+        <footer class="container-fluid text-center">
+           
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        
+        <!-- Generate a random layout -->
+        <script>
+            var expected_layout = document.querySelector('#expected-layout');
+            var design_layout = document.querySelector('#design-layout');
+            var design_canvas = document.querySelector('#design-canvas');
+
+            function randomGenerateLayout() {
+                // Generate random number from 1 to 12 columns and from 1 to 6 rows 
+                let rows = 1 + Math.floor(Math.random() * 5);
+                let cols = 1 + Math.floor(Math.random() * 11);
+                
+                // make boostrap layouts according to cols and rows
+                let htmlstring = "";
+
+                for(let i=1; i<=rows; i++) {
+                    htmlstring += `<div class='row bg-success text-light border border-light'>`;
+                    for(let j=1; j<=cols; j++) {
+                        htmlstring += `<div class='col bg-success p-2 text-light text-center border border-light'>row ${i} col ${j}</div>`;
+                    }
+                    htmlstring += `</div>`;    
+                }
+                expected_layout.innerHTML = "";
+                expected_layout.insertAdjacentHTML("afterbegin", htmlstring);
+                
+            }   
+            
+            // Apply design and produce layout 
+            function applyDesign() {
+                design_layout.innerHTML = "";
+                design_layout.insertAdjacentHTML('afterbegin', design_canvas.value);
+                console.log(design_layout.innerHTML);
+
+            }
+            
+            // Add Event Handler
+            window.addEventListener('load', () => {
+                randomGenerateLayout();
+                const btn = document.getElementById("btn-new-layout");
+                const btn_design = document.getElementById("btn-apply-design");
+
+                const htmlstring = `<div class='row bg-success text-light border border-light'>` + `<div class='col bg-success p-2 text-light text-center border border-light'>Row 1 col 1</div>` + 
+                                        `<div class='col bg-success p-2 text-light text-center border border-light'>row 1 col 2</div>` + `</div>`;
+
+                design_layout.innerHTML = "";
+                design_layout.insertAdjacentHTML('afterbegin', htmlstring);
+                
+                btn.addEventListener('click', randomGenerateLayout);
+                btn_design.addEventListener('click', applyDesign);
+
+            });
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- Display screen size when resizing -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Screen size</title>
+        <style>
+            .container {
+                text-align: center;
+                margin: 10px;
+                padding: 10px;
+                background-color: #ccc;
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Current Screen size</h1>
+        <div class="container"></div>
+
+        <script>
+            function updateScreenSize() {
+                const container = document.querySelector('.container');
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                container.textContent = `Width: ${width}px, Height: ${height}px`;
+            }
+            window.addEventListener('load', function() {
+                updateScreenSize();
+            });
+            window.addEventListener('resize', function() {
+                updateScreenSize();
+            });
+        </script>
+    </body>
+</html>
