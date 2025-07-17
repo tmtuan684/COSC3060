@@ -1,0 +1,23 @@
+{
+  "name": "product-mgmt",
+  "version": "1.0.0",
+  "description": "Simple product management web application with basis CRUD operations",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "mongodb-enabled",
+    "web",
+    "application"
+  ],
+  "author": "Tuan Tran",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.16.4"
+  }
+}

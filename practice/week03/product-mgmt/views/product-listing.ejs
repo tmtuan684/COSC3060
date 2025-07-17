@@ -1,0 +1,33 @@
+<%- include('partials/head', {title: title}) %>
+<body>
+    <div class="container">
+    <h1>Products</h1>
+    
+    <table>
+        
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>brand</th>
+                <th>description</th>
+                <th>price</th>
+                <th>stock</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <% productList.forEach(function(product) { %>
+            <tr>
+                <td><%= product.title %></td>
+                <td><%= product.brand %></td>
+                <td><%= product.description %></td>
+                <td><%= product.price %></td>
+                <td><%= product.stock %></td>
+                <td><a href="/product/<%= product._id %>/update">Edit</a></td>
+                <td><a href="/product/<%= product._id %>/delete">Remove</a></td>
+            </tr>
+        <% }) %>
+    </table>
+    </div>
+</body>
+</html>
