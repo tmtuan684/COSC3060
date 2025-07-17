@@ -11,6 +11,6 @@ const path = require('path');
 console.log("You provide " + process.argv.length + " command line arguments.");
 console.log("They are: ")
 for(let i=0; i < process.argv.length; i++) {
-    console.log(`Argument ${i+1}: ${process.argv[i]}`);
-    console.log(`- Base name of this argument is ${path.basename(process.argv[i])}`);
+    // console.log(`Argument ${i+1}: ${process.argv[i]}`);
+    console.log(`- Argument ${i+1}: ${path.basename(process.argv[i])}`);
 }

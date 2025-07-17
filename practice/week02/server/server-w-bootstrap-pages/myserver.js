@@ -48,3 +48,15 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+function fname(para1, para2) {
+  // define your function here
+}
+
+(para1, para2) => {
+
+}
+
+function serverStatus()  {
+  console.log(`Server running at http://${hostname}:${port}/`);
+}

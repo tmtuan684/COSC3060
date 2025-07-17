@@ -13,5 +13,5 @@ console.log("You provide " + process.argv.length + " command line arguments.");
 console.log("They are: ")
 for(let i=0; i < process.argv.length; i++) {
     const arg = process.argv[i];
-    console.log(`Argument ${i+1} is ` +  chalk.white.bgRed.bold(path.basename(arg)));
+    console.log(`Argument ${i+1} is ` +  chalk.yellow.bgRed.bold(path.basename(arg)));
 }

@@ -28,7 +28,7 @@ const server = http.createServer((req, res) => {
       res.setHeader('Content-Type', 'text/plain');
       res.end('This is the about page.\n');
       break;
-    case 'contact':
+    case '/contact':
       res.statusCode = 200;
       res.setHeader('Content-Type', 'text/plain');
       res.end('Contact page.\n');
