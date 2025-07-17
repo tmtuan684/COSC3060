@@ -1,7 +1,8 @@
 /**
  * @file models.js
  * @description This file defines The Mongoose models for the MongoDB database.
- */
+ * @reuires mongoose 
+*/
 const mongoose = require('mongoose');
 
 // connection string found in MongoDB Atlas
