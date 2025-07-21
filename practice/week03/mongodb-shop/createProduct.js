@@ -7,8 +7,8 @@
 const { Product } = require('./models');
 
 const newProduct = new Product({
-    name: 'Sample Product',
-    price: 100,
+    name: 'iPhone 15',
+    price: 999,
     category: 'Electronics'
 });
 

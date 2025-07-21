@@ -5,9 +5,9 @@
  */
 
 const mongoose = require('mongoose');
+
 // Connect string found in MongoDB Atlas
-const db = "db2";
-const connString = `mongodb+srv://tmtuan:mypassword@cosc3060.rqcqojz.mongodb.net/db2?retryWrites=true&w=majority&appName=cosc3060`;
+const connString = `mongodb+srv://tmtuan:mypassword@cosc3060.rqcqojz.mongodb.net/db4?retryWrites=true&w=majority&appName=cosc3060`;
 
 mongoose.connect(connString)
     .then(() => console.log("Successfully connected to MongoDB Atlas"))
@@ -20,4 +20,4 @@ const userSchema = new mongoose.Schema({
     age: Number
 }); 
 // For a database to be created, at least one collection must be created
-const userModel = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
