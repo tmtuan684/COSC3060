@@ -7,7 +7,7 @@
 const mongoose = require('mongoose');
 
 // Connect string found in mongoDB atlas
-const connString = "mongodb+srv://tmtuan:mypassword@cosc3060.rqcqojz.mongodb.net/?retryWrites=true&w=majority&appName=cosc3060";
+const connString = "mongodb+srv://<username>:<password>@<cluster>.rqcqojz.mongodb.net/?retryWrites=true&w=majority&appName=<cluster>";
 
 mongoose.connect(connString)
     .then(() => console.log("Successfully connected to MongoDB Atlas"))
