@@ -19,6 +19,9 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+// statuc content
+app.use(express.static('public'));
+
 /* Routes */
 // READ - Get all product
 app.get(['/'], (req, res) => {
