@@ -72,5 +72,10 @@ h2 {
 }
 h3 {
     color: #000054;
-    margin-left: 40px;
+    margin-left: 60px;
+}
+.lesson {
+    margin-left: 60px;
+    text-align: justify;
+    color: #000054;
 }
