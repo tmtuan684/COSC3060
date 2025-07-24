@@ -1,0 +1,76 @@
+:root {
+    --bg-color-sidebar: #000054;
+    --nav-width: 20%;
+    --bg-color-emphasize: red;
+}
+@font-face {
+    font-family: "Museo-300";
+    src: url('../fonts/MuseoRMITVN-300.otf');
+}
+@font-face {
+    font-family: "Museo-500";
+    src: url('../fonts/MuseoRMITVN-500.otf');
+}
+@font-face {
+    font-family: "Museo-700";
+    src: url('../fonts/MuseoRMITVN-700.otf');
+}
+* {
+    margin: 0;
+}
+nav {
+    position: fixed;
+    width: var(--nav-width); 
+    height: 100%;
+    font-family: 'Museo-500', serif;
+    font-size: x-large;
+    background-color: var(--bg-color-sidebar);
+    color: white;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+nav > a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+}
+main {
+    position: relative;
+    left: var(--nav-width);
+    overflow-y: visible;
+    padding-top:40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 70%;
+    margin:0;
+}
+header {
+    background-color: red;
+    color: white;
+    margin:0;
+    height: 60px;
+    text-align: center;
+    align-content: center;
+}
+.emphasize {
+    display: inline-block;
+    background-color: var(--bg-color-emphasize);
+    color: white;
+    font-weight: bold;
+    padding: 1px 6px 1px 6px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Museo-500', serif;
+}
+h1 {
+   text-align: center;
+}
+h2 {
+    color: red;
+    margin-left: 20px;
+}
+h3 {
+    color: #000054;
+    margin-left: 40px;
+}
