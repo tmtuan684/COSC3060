@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabindex Example</title>
+</head>
+<body>
+    <h2>Tabindex Demo</h2>
+    <span>Definition: Tabindex is the sequential movement order in which elements receive focus when navigating with the tab key on keyboard.</span><br>
+    <em>Note:   <br>
+         Elements with a positive tabindex are focused in ascending order. The smaller the tabindex value, the higher priority it has. <br>
+        Elements with a tabindex of -1 are not focusable via the keyboard but can be focused programmatically.</em>
+    <p>Demo: <br><P></P>ress Tab to move through the elements in order:</p>
+    <button tabindex="2">Second (tabindex=2)</button>
+    <button tabindex="1">First (tabindex=1)</button>
+    <button tabindex="3">Third (tabindex=3)</button>
+    <a href="#" tabindex="4">Fourth (tabindex=4)</a>    
+    <input type="text" placeholder="Fifth (tabindex=5)" tabindex="5">
+    <button tabindex="-1">Sixth (tabindex=-1)</button>
+    <br><br>
+    <button>Default (no tabindex)</button>
+</body>
+</html>
